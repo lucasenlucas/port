@@ -42,6 +42,18 @@
     .header-content {
       display: flex;
       align-items: center;
+      width: 100%;
+    }
+
+    .search-bar {
+      width: 100%;
+      max-width: 400px;
+      padding: 8px;
+      font-size: 16px;
+      color: #333;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      margin-right: 10px;
     }
 
     .dot {
@@ -49,6 +61,7 @@
       height: 15px;
       border-radius: 50%;
       margin-right: 10px;
+      cursor: pointer;
     }
 
     .green {
@@ -63,9 +76,9 @@
       background-color: #F44336;
     }
 
-    h1 {
-      font-size: 18px;
-      margin-left: 10px;
+    .inactive {
+      background-color: #D3D3D3;
+      cursor: not-allowed;
     }
 
     .close-btn {
@@ -74,10 +87,6 @@
       font-size: 20px;
       cursor: pointer;
       color: #999;
-    }
-
-    .close-btn:hover {
-      color: #f44336;
     }
 
     .document-content {
@@ -111,11 +120,10 @@
     <!-- Browser Header -->
     <header>
       <div class="header-content">
-        <span class="dot green"></span>
-        <span class="dot yellow"></span>
-        <span class="dot red"></span>
-        <h1>Naamloos document</h1>
-        <button class="close-btn" onclick="goToDesktop()">✖</button>
+        <input type="text" class="search-bar" placeholder="portfolio.lucasm.nl">
+        <span class="dot green" onclick="goFullScreen()"></span>
+        <span class="dot yellow inactive"></span>
+        <span class="dot red" onclick="goToDesktop()"></span>
       </div>
     </header>
 
@@ -129,8 +137,22 @@
   </div>
 
   <script>
+    // Functie voor het gaan naar de desktop pagina
     function goToDesktop() {
       window.location.href = 'desktop.html';  // Verandert naar desktop.html
+    }
+
+    // Functie voor het vergroten van het scherm
+    function goFullScreen() {
+      if (document.documentElement.requestFullscreen) {
+        document.documentElement.requestFullscreen();
+      } else if (document.documentElement.mozRequestFullScreen) { // Firefox
+        document.documentElement.mozRequestFullScreen();
+      } else if (document.documentElement.webkitRequestFullscreen) { // Chrome, Safari en Opera
+        document.documentElement.webkitRequestFullscreen();
+      } else if (document.documentElement.msRequestFullscreen) { // Internet Explorer/Edge
+        document.documentElement.msRequestFullscreen();
+      }
     }
   </script>
 
