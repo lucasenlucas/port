@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lucas OS Portfolio</title>
+  <style>
+    /* Algemene reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      height: 100vh;
+      align-items: center;
+    }
+
+    .browser {
+      width: 80%;
+      max-width: 1000px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    header {
+      background-color: #f1f1f1;
+      padding: 10px;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .header-content {
+      display: flex;
+      align-items: center;
+    }
+
+    .dot {
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+
+    .green {
+      background-color: #4CAF50;
+    }
+
+    .yellow {
+      background-color: #FFEB3B;
+    }
+
+    .red {
+      background-color: #F44336;
+    }
+
+    h1 {
+      font-size: 18px;
+      margin-left: 10px;
+    }
+
+    .close-btn {
+      background: none;
+      border: none;
+      font-size: 20px;
+      cursor: pointer;
+      color: #999;
+    }
+
+    .close-btn:hover {
+      color: #f44336;
+    }
+
+    .document-content {
+      padding: 20px;
+    }
+
+    .document-content h2 {
+      font-size: 24px;
+      color: #4A90E2;
+      margin-bottom: 10px;
+    }
+
+    .document-content p {
+      font-size: 16px;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 14px;
+      color: #777;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="browser">
+    <!-- Browser Header -->
+    <header>
+      <div class="header-content">
+        <span class="dot green"></span>
+        <span class="dot yellow"></span>
+        <span class="dot red"></span>
+        <h1>Naamloos document</h1>
+        <button class="close-btn" onclick="goToDesktop()">✖</button>
+      </div>
+    </header>
+
+    <!-- Document Content -->
+    <div class="document-content">
+      <h2>Hoi, ik ben Lucas!</h2>
+      <p>Welkom op mijn portfolio! Zodra je deze tekst hebt gelezen, klik dan op het kruisje bovenaan om dit tabblad te sluiten.</p>
+      <p>Ik ben een 14-jarige jongen uit Nootdorp die van programmeren houdt. Ik ben begonnen met programmeren toen ik 9 was tijdens de coronatijd.</p>
+      <p>Ik werk aan verschillende projecten, waaronder mijn portfolio, How to Hack (HTH), en een fotosynthese-simulatie. Ik heb veel geleerd over webontwikkeling, CTF (Capture The Flag) puzzels en andere ICT-gerelateerde onderwerpen.</p>
+    </div>
+  </div>
+
+  <script>
+    function goToDesktop() {
+      window.location.href = 'desktop.html';  // Verandert naar desktop.html
+    }
+  </script>
+
+</body>
+</html>
