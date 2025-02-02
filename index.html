@@ -42,6 +42,28 @@
     .header-content {
       display: flex;
       align-items: center;
+      width: 100%;
+    }
+
+    /* Mooie zoekbalk */
+    .search-bar {
+      width: 100%;
+      max-width: 450px;
+      padding: 10px 20px;
+      font-size: 16px;
+      color: #333;
+      border: 1px solid #ccc;
+      border-radius: 25px;
+      background-color: #f9f9f9;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      outline: none;
+      transition: all 0.3s ease;
+    }
+
+    .search-bar:focus {
+      border-color: #4A90E2;
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
     }
 
     .dot {
