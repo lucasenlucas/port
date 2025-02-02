@@ -42,18 +42,6 @@
     .header-content {
       display: flex;
       align-items: center;
-      width: 100%;
-    }
-
-    .search-bar {
-      width: 100%;
-      max-width: 400px;
-      padding: 8px;
-      font-size: 16px;
-      color: #333;
-      border: 1px solid #ddd;
-      border-radius: 5px;
-      margin-right: 10px;
     }
 
     .dot {
@@ -120,10 +108,10 @@
     <!-- Browser Header -->
     <header>
       <div class="header-content">
-        <input type="text" class="search-bar" placeholder="portfolio.lucasm.nl">
         <span class="dot green" onclick="goFullScreen()"></span>
         <span class="dot yellow inactive"></span>
         <span class="dot red" onclick="goToDesktop()"></span>
+        <h1>Naamloos document</h1>
       </div>
     </header>
 
@@ -139,7 +127,7 @@
   <script>
     // Functie voor het gaan naar de desktop pagina
     function goToDesktop() {
-      window.location.href = 'desktop.html';  // Verandert naar desktop.html
+      window.location.href = 'desktop.index.html';  // Verandert naar desktop.index.html
     }
 
     // Functie voor het vergroten van het scherm
